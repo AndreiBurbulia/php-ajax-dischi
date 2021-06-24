@@ -27,6 +27,7 @@ $dischi //include i dischi;
     include './templates/main.php';
     
     ?>
+    
 
 
     <script src="./dist/js/app.js"></script>
