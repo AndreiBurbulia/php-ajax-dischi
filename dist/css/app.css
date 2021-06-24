@@ -18,6 +18,11 @@ header img {
 header > div {
   margin-right: 6rem;
 }
+header > div .active {
+  border: 1px solid white;
+  border-radius: 1rem;
+  padding: 1rem;
+}
 header a {
   text-decoration: none;
   color: white;

@@ -10,6 +10,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     img {
         height: 50px;
         margin: 1rem;
@@ -17,6 +18,12 @@ header {
 
     & > div {
         margin-right: 6rem;
+
+        .active {
+            border: 1px solid white;
+            border-radius: 1rem;
+            padding: 1rem;
+        }
     }
 
     a {

@@ -7,7 +7,21 @@
   \********************/
 /***/ (() => {
 
+var app = new Vue({
+  el: '#app',
+  data: {
+    prova: 'cuiao',
+    dischi: null
+  },
+  mounted: function mounted() {
+    var _this = this;
 
+    axios.get('./api/dischi.php').then(function (response) {
+      _this.dischi = response.data;
+      console.log(_this.dischi);
+    });
+  }
+});
 
 /***/ }),
 

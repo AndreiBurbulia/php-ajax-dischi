@@ -23,14 +23,11 @@ $dischi //include i dischi;
 
 <body>
     <?php
-    include './templates/header.php';
-    include './templates/main.php';
-    
+    include __DIR__ . './templates/header.php';
+    include __DIR__ . './templates/main.php';
     ?>
-    
 
 
-    <script src="./dist/js/app.js"></script>
 </body>
 
 </html>
