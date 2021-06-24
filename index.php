@@ -1,3 +1,10 @@
+<?php
+include './database/db.php';
+var_dump($dischi);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
