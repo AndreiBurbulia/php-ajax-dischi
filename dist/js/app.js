@@ -10,16 +10,29 @@
 var app = new Vue({
   el: '#app',
   data: {
-    prova: 'cuiao',
-    dischi: null
+    dischi: null,
+    prova: null,
+    genre: 'rock',
+    dischi_filtrati: null
+  },
+  methods: {
+    refresh: function refresh() {
+      console.log('ok');
+    }
   },
   mounted: function mounted() {
     var _this = this;
 
-    axios.get('./api/dischi.php').then(function (response) {
-      _this.dischi = response.data;
-      console.log(_this.dischi);
-    });
+    /**/
+    if (this.prova === null) {
+      axios.get('./api/dischi.php').then(function (response) {
+        _this.dischi = response.data;
+      });
+    } else {
+      axios.get('./database/db_filter.php?genre=' + this.genre).then(function (response) {
+        _this.dischi = response.data;
+      });
+    }
   }
 });
 

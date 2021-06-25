@@ -72,3 +72,19 @@ $dischi = [
         "year"=> "1987"
     ]
 ];
+
+$filter = $_GET['genre'];
+
+$dischi_filtrati = [];
+
+foreach ($dischi as $disco) {
+    $genre = strtolower( $disco['genre']);
+    if($genre === $filter){
+        $dischi_filtrati[]=$disco; 
+    }
+}
+
+
+header('Content-Type: application/json');
+
+echo json_encode($dischi_filtrati);
